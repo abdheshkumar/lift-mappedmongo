@@ -19,11 +19,6 @@ abstract class MappedObjectId[T <: Mapper[T]](val fieldOwner: T) extends MappedF
 
   def dbFieldClass = classOf[ObjectId]
 
-  /*protected def valueTypeToBoxString(in: ObjectId): Box[String] = Full(in.toString)
-  protected def boxStrToValType(in: Box[String]): ObjectId =
-    in.filter(ObjectId.isValid).map(s => new ObjectId(s))*/
-
-
   protected def real_i_set_!(value: ObjectId): ObjectId = {
     if (!data.defined_? || value != data.get) {
       data() = value
