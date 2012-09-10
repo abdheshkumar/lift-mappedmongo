@@ -6,3 +6,6 @@ Thumbs.db
 # sbt
 target/
 project/
+
+# h2 db files
+*.db
